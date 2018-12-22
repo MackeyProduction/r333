@@ -1,0 +1,189 @@
+@import "../01-variables/_base";
+@import "../02-mixins/_mixins";
+@import "../06-externals/_bootstrap";
+
+html, body {
+    height: $height;
+    margin: 0;
+}
+
+.welcomeTeaser {
+    overflow: hidden;
+    height: $teaserHeight;
+    width: $teaserWidth;
+    min-height: $teaserMinHeight;
+    background-size: cover;
+    background-image: url("../img/background.jpg");
+    background-position: 100% 60%;
+
+    @media (max-width: 768px) {
+        height: auto;
+    }
+
+    &.after {
+        position: absolute;
+        opacity: 0.6;
+        background: $darkGrey;
+        min-height: 80vh;
+    }
+
+    &-container {
+        @extend .container;
+
+        @include media-breakpoint-down(md) {
+            padding-right: 10% !important;
+        }
+    }
+
+    &-inner {
+        padding-left: 60px;
+        bottom: 0;
+        flex-direction: column;
+        justify-content: flex-end;
+        min-height: 80vh;
+        @include make-row();
+    }
+
+    &__description {
+        position: relative;
+        color: $white;
+        text-shadow: 0 1px 3px $textShadow;
+        z-index: 1;
+        padding-right: 15px;
+        padding-bottom: 15%;
+        text-align: right;
+
+        &-headline > h1 {
+            margin-bottom: 20px;
+
+            @media (min-width: 560px) {
+                font-size: $wrapperHeadline;
+            }
+        }
+
+        &-text > p {
+            font-size: $wrapperContent;
+        }
+    }
+}
+
+.main-section {
+    @extend .container;
+    background: transparent;
+    padding: $sectionPadding;
+
+    &.colored {
+        background: #3C9 !important;
+        max-width: 100%;
+    }
+
+    &.white {
+        background: #FFFFFF !important;
+        max-width: 100%;
+    }
+}
+
+.team {
+    &__headline {
+        padding: 40px 60px 40px 60px;
+        text-align: center;
+        text-transform: uppercase;
+
+        &--font {
+            line-height: 2em;
+        }
+    }
+
+    &__profile {
+        margin-bottom: 60px;
+
+        &.right {
+            .team__profile__photo {
+                @extend .team__profile__photo;
+                float: right !important;
+            }
+
+            .team__profile__description {
+                @extend .team__profile__description;
+                border-radius: 10px 250px 250px 10px !important;
+            }
+
+            .team__profile__description--headline {
+                @extend .team__profile__description--headline;
+                margin: 0 150px 0 0 !important;
+            }
+
+            .team__profile__description--content {
+                @extend .team__profile__description--content;
+                margin: 0 250px 0 0 !important;
+            }
+
+            .team__profile__description--headline-border {
+                @extend .team__profile__description--headline-border;
+                margin: 0 110px 0 0 !important;
+            }
+        }
+
+        &__photo {
+            float: $profileFloat;
+            z-index: 9999;
+            min-height: 250px;
+            min-width: 250px;
+
+            @include media-breakpoint-down(md) {
+                float: none !important;
+                position: relative !important;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            img {
+                height: 250px;
+                width: 250px;
+            }
+        }
+
+        &__description {
+            background: #ffffff;
+            border: 1px solid #3C9;
+            border-radius: $borderRadiusDescription;
+            min-height: 250px;
+
+            @include media-breakpoint-down(md) {
+                border-radius: 10px !important;
+            }
+
+            &--headline-border {
+                background: #3C9;
+                color: #ffffff;
+                margin: $profileDescriptionHeadlineBorderMargin;
+
+                @include media-breakpoint-down(md) {
+                    margin: 0 !important;
+                    border-radius: 10px 10px 0 0 !important;
+                }
+            }
+
+            &--headline {
+                margin: $profileDescriptionHeadlineMargin;
+                font-size: 16px;
+                line-height: 2em;
+                padding: 10px;
+
+                @include media-breakpoint-down(md) {
+                    margin: 0 !important;
+                }
+            }
+
+            &--content {
+                margin: $profileDescriptionContentMargin;
+                display: block;
+                padding: 10px;
+
+                @include media-breakpoint-down(md) {
+                    margin: 0 !important;
+                }
+            }
+        }
+    }
+}

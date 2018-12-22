@@ -1,0 +1,60 @@
+@import "../01-variables/_base";
+
+.footer {
+  color: $white;
+  position: absolute;
+  width: $width;
+  background-color: $darkGrey;
+  padding: 40px 0 40px 0;
+
+  &-subpage {
+    position: absolute;
+    bottom: 0;
+
+    @media (max-width: 768px) {
+      position: relative;
+    }
+  }
+
+  &-content {
+    width: 80%;
+  }
+
+  .text {
+    &-right {
+      float: right;
+    }
+
+    &-left {
+      float: left;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    @media (max-width: 768px) {
+      float: left;
+    }
+  }
+
+  li {
+    margin-right: 30px;
+    float: left;
+
+    @media (max-width: 768px) {
+      clear: both;
+    }
+  }
+
+  a {
+    color: $white;
+
+    &:hover {
+      text-decoration: none;
+      color: #fed136;
+    }
+  }
+}
