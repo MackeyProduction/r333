@@ -9460,6 +9460,16 @@ html, body {
   }
 }
 
+/* line 191, ../scss/05-components/_wrapper.scss */
+.readMore {
+  max-height: 233px;
+  overflow: hidden;
+}
+/* line 195, ../scss/05-components/_wrapper.scss */
+.readMore.less {
+  max-height: 100% !important;
+}
+
 /* line 1, ../scss/05-components/_timeline.scss */
 .timeline {
   position: relative;

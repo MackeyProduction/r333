@@ -3,36 +3,57 @@ var readMoreContentShow;
 var readMoreContentHide;
 
 $(document).ready(function () {
-    readMoreContent = $("#readMoreAboutUs");
-    readMoreContentShow = $("#readMoreAboutUs-show");
-    readMoreContentHide = $("#readMoreAboutUs-hide");
-    var height = readMoreContent.height();
+    var arrayReadMoreContent = [];
+    var arrayReadMoreContentHide = [];
+    var arrayReadMoreContentShow = [];
 
-    // hide elements
-    readMoreContentShow.hide();
-    readMoreContentHide.hide();
+    $("div[data-readMore]").each(function (i) {
+        readMoreContent = $("#" + $(this).attr("data-readmore"));
+        readMoreContentHide = $("#" + $(this).find("button:last").attr("data-readmorehide"));
+        readMoreContentShow = $("#" + $(this).find("button:first").attr("data-readmoreshow"));
 
-    if (height >= 233) {
-        hideContent();
-    }
+        // hide elements
+        readMoreContentShow.show();
+        readMoreContentHide.hide();
 
-    readMoreContentShow.click(function () {
-        showContent();
+        arrayReadMoreContent.push(readMoreContent);
+        arrayReadMoreContentHide.push(readMoreContentHide);
+        arrayReadMoreContentShow.push(readMoreContentShow);
     });
 
-    readMoreContentHide.click(function () {
-        hideContent();
+    $("button[data-readmorehide]").click(function () {
+        var readMoreHideButton = $(this).attr("data-readmorehide");
+
+        if (typeof readMoreHideButton !== typeof undefined) {
+            readMoreContentHide = $("#" + readMoreHideButton);
+            hideContent();
+        }
+    });
+
+    $("button[data-readmoreshow]").click(function () {
+        var readMoreShowButton = $(this).attr("data-readmoreshow");
+
+        if (typeof readMoreShowButton !== typeof undefined) {
+            for (var i = 0; i < arrayReadMoreContentShow.length; i++) {
+                if (readMoreShowButton === arrayReadMoreContentShow[i][0].id) {
+                    readMoreContentShow = $("#" + readMoreShowButton);
+                    readMoreContentHide = $("#" + arrayReadMoreContentHide[i][0].id);
+                    readMoreContent = $("#" + arrayReadMoreContent[i][0].id);
+                    showContent();
+                }
+            }
+        }
     });
 });
 
 function showContent() {
-    readMoreContent.attr("style", "max-height: auto;");
+    readMoreContent.addClass("less");
     readMoreContentShow.hide();
     readMoreContentHide.show();
 }
 
 function hideContent() {
-    readMoreContent.attr("style", "max-height: 233px; overflow: hidden;");
+    readMoreContent.removeClass("less");
     readMoreContentShow.show();
     readMoreContentHide.hide();
 }

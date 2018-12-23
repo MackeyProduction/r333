@@ -187,3 +187,12 @@ html, body {
         }
     }
 }
+
+.readMore {
+    max-height: 233px;
+    overflow: hidden;
+
+    &.less {
+        max-height: 100% !important;
+    }
+}
