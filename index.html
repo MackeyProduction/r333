@@ -16,6 +16,7 @@
     <script src="./js/jquery-3.2.1.js"></script>
     <script src="./js/bootstrap.js"></script>
     <script src="./js/wow.js"></script>
+    <script src="./js/script.js"></script>
 
     <nav class="r333Navbar">
         <div class="r333Navbar-container">
@@ -69,26 +70,137 @@
     </div>
 </div>
 
-<div class="bg-orange" style="padding: 60px 0 100px;">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 wow fadeInDown"
-                 style="text-align: center; padding-bottom: 50px; text-transform: uppercase">
-                <h2 class="my-4">Über Uns</h2>
-            </div>
-            <div class="col-lg-7 wow fadeInLeft">
-                <img src="img/team.jpg" width="90%">
-            </div>
-            <div class="col-lg-5 wow fadeInRight">
-                <p><strong>Rollerfründe 333: "Eine Rollergemeinschaft stellt sich vor!"</strong>
+<div id="readMoreBox" class="bg-orange" style="padding: 60px 0 100px; min-height: 570px;">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" style="min-height: 410px;">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 wow fadeInDown"
+                             style="text-align: center; padding-bottom: 50px; text-transform: uppercase">
+                            <h2 class="my-4">Über Uns</h2>
+                        </div>
+                        <div class="col-lg-7 wow fadeInLeft">
+                            <img src="img/team.jpg" width="90%">
+                        </div>
+                        <div class="col-lg-5 wow fadeInRight" data-readMore="readMoreAboutUs">
+                            <p id="readMoreAboutUs"><strong>Rollerfründe 333: "Eine Rollergemeinschaft stellt sich vor!"</strong>
 
-                    Die Rollerfründe 333 ist eine Interessengemeinschaft von Rollerfahrern und Bikern, die sich auf mindestens 2 Rädern ab 250 ccm fortbewegen wollen.
+                                Die Rollerfründe 333 ist eine Interessengemeinschaft von Rollerfahrern und Bikern, die sich auf mindestens 2 Rädern ab 250 ccm fortbewegen wollen.
 
-                    Wir, das sind z.Zt. Verheiratete, Junge und Alte mit den unterschiedlichsten Berufen, die ein gemeinsames Hobby haben:
-                    Gemeinsam auf Tour gehen.
-                    <a href="#">weiterlesen...</a></p>
+                                Wir, das sind z.Zt. Verheiratete, Junge und Alte mit den unterschiedlichsten Berufen, die ein gemeinsames Hobby haben:
+                                Gemeinsam auf Tour gehen.
+
+                                Familienmitglieder und Bekannte nehmen wir gerne zu gemeinsamen Touren mit.
+
+                                Unser Hobby wollen wir mit Gleichgesinnten teilen, denn zu zweit oder auch mehreren macht das Fachsimpeln, Benzingespräche oder auch nur klönen einfach mehr Spaß.
+                                Wir sind eine lose Interessengemeinschaft und verzichten auf Satzungen und Vereine.
+                                Im Vordergrund steht der gemeinsame Spaß, wie Tagestouren, Rollertreffen und Besuche von Veranstaltungen.
+                                Schau doch mal rein:
+
+                                Wir treffen uns jeden:
+                                ersten Samstag im Monat
+                                um: 17:00 Uhr
+
+                                im: Restaurant Poseidon Zum Wasserturm
+
+                                Langenacker Str. 2
+                                50389 Wesseling
+                                Tel.: 02232/47077
+
+                                Nähere Informationen erhälst Du auch unter:
+                                Ralf email: info@rollerfruende-333.de
+                            </p>
+                            <button class="btn-link" id="readMoreAboutUs-show">weiterlesen...</button>
+                            <button onclick="window.location = '#readMoreBox';" class="btn-link" id="readMoreAboutUs-hide">weniger einblenden...</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12"
+                             style="text-align: center; padding-bottom: 50px; text-transform: uppercase">
+                            <h2 class="my-4">Entstehung</h2>
+                        </div>
+                        <div class="col-lg-7">
+                            <img src="img/team.jpg" width="90%">
+                        </div>
+                        <div class="col-lg-5">
+                            <p id="readMoreFounding"><strong>Wie entstand die Interessengemeinschaft „Rollerfründe 333“? Und wofür steht die Zahl „333“?</strong>
+                                (ein Beitrag von Ralf A, Gründungsmitglied der Rollerfründe 333)
+
+                                Mit der EG-Gesetzesänderung zum 01.März 1996, bei der Autofahrer der Klasse 3 (Führerschein vor dem 01. April 1980 erworben) einen 125 ccm Roller fahren dürfen, stieg das Interesse für einen 125 ccm-Roller.
+                                Nach ersten Erwägungen und Entscheidungen zwischen einer teuren Piaggio Hexagon, Piaggio 125 SKR und einer Piaggio 125 ccm Sfera, entschied ich mich für letzteren.
+                                Dieser Roller durfte ich dann für 4950 DM mein eigen nennen.
+                                Im Jahre 1999 wurde ich vor meiner Haustüre von einem Rollerfahrer angesprochen, ob ich Lust hätte bei einem Rollerclub mitzufahren. Gerade wären sie im Aufbau eines neuen Rollerclubs im Bergischen.
+                                Nach ein paar Tagen der Überlegung trat ich dem damaligem Rollerclub „Freche Kolben“ bei.
+                                Nachdem ich über diesem Rollerclub viele weiteren Rollerclubs kennenlernte, gab ich an einem unseren gemeinsamen Jahrestreffen (genaugenommen war es im Januar 2003) bekannt, dass ich auch einen Rollerclub als Interessengemeinschaft gründen werde.
+
+                                Nach reiflicher Überlegung entstand der Name „Rollerfründe 333“.
+
+                                <u>Wie kam es zu dieser Namensgebung?</u>
+                                Nun ja!
+                                Wesseling liegt im Rheinland zwischen Köln und Bonn.
+                                Es war Karnevalszeit. Und damit auch Jeckenzeit!
+
+                                Daher gründete ich mit dem Datum: 03.03.2003 diesen Rollerclub.
+                                Und da es im Kölner Raum viele „Fründe“ gibt (nach dem Motto: Echte Fründe halten zusammen seid eh und je, das Karnevalslied lässt grüßen!), entstand Rollerfründe 333.
+
+                                Übrigens: Der 03.03.2003 passte deshalb so gut, weil dieser Tag ein Rosenmontag war.
+
+                                <u>Fazit:</u>
+                                Unser „kleiner Haufen“ (von z.Zt. 10 Mitgliedern) von edlen in Freundschaft zusammenfahrende Mitgliedern wollen gemeinsam Spaß haben und teilen unser Hobby mit anderen Gleichgesinnten.
+                                Wir gehen gerne auf gemeinschaftlichen Tagestouren sowie Mehrtagestouren, besuchen gerne andere befreundete Rollerclubs an Wochenenden und frönen in unserer Freizeit gerne unserem Hobby.
+                                Ich bin stolz unseren gemeinsamen 8. Jahrestag erleben und feiern zu dürfen.
+
+                                <strong>(gez. am: 05.03.2011, Gründer der RF333, Ralf A.)</strong>
+
+                                Was nun doch die Zeit vergeht,
+                                nun schon 11 Jahr auf dem Kalender steht.
+
+                                Im Elften Jahr, das ist nun mal klar,
+                                wieder ein Rosenmontag war.
+
+                                Ich/Wir freuen uns mit Euch auf viele weitere Jahr,
+                                Dafür sind die Rollerfründe schließlich da.
+
+                                <strong>(gez. am: 03.03.2014, Gründer der RF333, Ralf A.)</strong>
+                            </p>
+                            <button class="btn-link" id="readMoreFounding-show">weiterlesen...</button>
+                            <button onclick="window.location = '#readMoreBox';" class="btn-link" id="readMoreFounding-hide">weniger einblenden...</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12"
+                             style="text-align: center; padding-bottom: 50px; text-transform: uppercase">
+                            <h2 class="my-4">News</h2>
+                        </div>
+                        <div class="col-lg-12">
+                            <p><strong>Weihnachtsessen</strong>
+
+                                am: Sonntag, den 09.12.
+                                um: 13:00 Uhr
+                                Treffen im: Bürgerstuben Cerovic,
+                                Rathausallee 169, 47445 Moers</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
 </div>
 

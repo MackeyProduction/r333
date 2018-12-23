@@ -38,6 +38,8 @@
 
         &--marked {
             background-color: #fed136 !important;
+            -webkit-transition: transform 0.2s;
+            transition: transform 0.2s;
 
             &:hover {
                 -webkit-transform: scale(1.2);

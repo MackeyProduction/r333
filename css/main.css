@@ -9507,8 +9507,10 @@ html, body {
 /* line 39, ../scss/05-components/_timeline.scss */
 .timeline-bulletPoint--marked {
   background-color: #fed136 !important;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
 }
-/* line 42, ../scss/05-components/_timeline.scss */
+/* line 44, ../scss/05-components/_timeline.scss */
 .timeline-bulletPoint--marked:hover {
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
@@ -9516,73 +9518,73 @@ html, body {
   -o-transform: scale(1.2);
   transform: scale(1.2);
 }
-/* line 52, ../scss/05-components/_timeline.scss */
+/* line 54, ../scss/05-components/_timeline.scss */
 .timeline-panel {
   width: 50%;
   float: left;
   padding: 0 20px 0 80px;
 }
 @media (max-width: 991px) {
-  /* line 52, ../scss/05-components/_timeline.scss */
+  /* line 54, ../scss/05-components/_timeline.scss */
   .timeline-panel {
     padding: 0 20px 20px 40px;
     width: 100% !important;
   }
 }
-/* line 62, ../scss/05-components/_timeline.scss */
+/* line 64, ../scss/05-components/_timeline.scss */
 .timeline-panel__heading {
   text-align: right;
 }
 @media (max-width: 991px) {
-  /* line 62, ../scss/05-components/_timeline.scss */
+  /* line 64, ../scss/05-components/_timeline.scss */
   .timeline-panel__heading {
     text-align: left !important;
   }
 }
-/* line 70, ../scss/05-components/_timeline.scss */
+/* line 72, ../scss/05-components/_timeline.scss */
 .timeline-panel__content {
   text-align: right;
 }
 @media (max-width: 991px) {
-  /* line 70, ../scss/05-components/_timeline.scss */
+  /* line 72, ../scss/05-components/_timeline.scss */
   .timeline-panel__content {
     text-align: left !important;
   }
 }
-/* line 78, ../scss/05-components/_timeline.scss */
+/* line 80, ../scss/05-components/_timeline.scss */
 .timeline-panel-inverted {
   width: 48%;
   float: right;
   padding: 0 80px 0 20px;
 }
 @media (max-width: 991px) {
-  /* line 78, ../scss/05-components/_timeline.scss */
+  /* line 80, ../scss/05-components/_timeline.scss */
   .timeline-panel-inverted {
     padding: 0 20px 20px 40px;
     width: 100% !important;
     float: left !important;
   }
 }
-/* line 89, ../scss/05-components/_timeline.scss */
+/* line 91, ../scss/05-components/_timeline.scss */
 .timeline-panel-inverted__heading {
   text-align: left;
 }
-/* line 93, ../scss/05-components/_timeline.scss */
+/* line 95, ../scss/05-components/_timeline.scss */
 .timeline-panel-inverted__content {
   text-align: left;
 }
 
-/* line 100, ../scss/05-components/_timeline.scss */
+/* line 102, ../scss/05-components/_timeline.scss */
 .timeline-vertical {
   position: relative;
   list-style: none;
   padding: 0;
 }
-/* line 105, ../scss/05-components/_timeline.scss */
+/* line 107, ../scss/05-components/_timeline.scss */
 .timeline-vertical > li {
   float: left;
 }
-/* line 109, ../scss/05-components/_timeline.scss */
+/* line 111, ../scss/05-components/_timeline.scss */
 .timeline-vertical.before {
   position: absolute;
   left: 0;
@@ -9594,12 +9596,12 @@ html, body {
   margin-top: 10px;
 }
 @media (max-width: 991px) {
-  /* line 109, ../scss/05-components/_timeline.scss */
+  /* line 111, ../scss/05-components/_timeline.scss */
   .timeline-vertical.before {
     left: 15px;
   }
 }
-/* line 124, ../scss/05-components/_timeline.scss */
+/* line 126, ../scss/05-components/_timeline.scss */
 .timeline-vertical-bulletPoint {
   width: 25px;
   height: 25px;
@@ -9608,16 +9610,16 @@ html, body {
   background-color: #bbb;
 }
 @media (max-width: 991px) {
-  /* line 124, ../scss/05-components/_timeline.scss */
+  /* line 126, ../scss/05-components/_timeline.scss */
   .timeline-vertical-bulletPoint {
     left: 0 !important;
   }
 }
-/* line 135, ../scss/05-components/_timeline.scss */
+/* line 137, ../scss/05-components/_timeline.scss */
 .timeline-vertical-bulletPoint--marked {
   background-color: #fed136 !important;
 }
-/* line 138, ../scss/05-components/_timeline.scss */
+/* line 140, ../scss/05-components/_timeline.scss */
 .timeline-vertical-bulletPoint--marked:hover {
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
@@ -9625,49 +9627,49 @@ html, body {
   -o-transform: scale(1.2);
   transform: scale(1.2);
 }
-/* line 148, ../scss/05-components/_timeline.scss */
+/* line 150, ../scss/05-components/_timeline.scss */
 .timeline-vertical-panel {
   padding: 0 80px 0 0;
 }
-/* line 151, ../scss/05-components/_timeline.scss */
+/* line 153, ../scss/05-components/_timeline.scss */
 .timeline-vertical-panel__heading {
   text-align: right;
 }
 @media (max-width: 991px) {
-  /* line 151, ../scss/05-components/_timeline.scss */
+  /* line 153, ../scss/05-components/_timeline.scss */
   .timeline-vertical-panel__heading {
     text-align: left !important;
   }
 }
-/* line 159, ../scss/05-components/_timeline.scss */
+/* line 161, ../scss/05-components/_timeline.scss */
 .timeline-vertical-panel__content {
   text-align: right;
 }
 @media (max-width: 991px) {
-  /* line 159, ../scss/05-components/_timeline.scss */
+  /* line 161, ../scss/05-components/_timeline.scss */
   .timeline-vertical-panel__content {
     text-align: left !important;
   }
 }
-/* line 167, ../scss/05-components/_timeline.scss */
+/* line 169, ../scss/05-components/_timeline.scss */
 .timeline-vertical-panel-inverted {
   width: 48%;
   float: right;
   padding: 0 80px 0 20px;
 }
 @media (max-width: 991px) {
-  /* line 167, ../scss/05-components/_timeline.scss */
+  /* line 169, ../scss/05-components/_timeline.scss */
   .timeline-vertical-panel-inverted {
     padding: 0 20px 20px 40px;
     width: 100% !important;
     float: left !important;
   }
 }
-/* line 178, ../scss/05-components/_timeline.scss */
+/* line 180, ../scss/05-components/_timeline.scss */
 .timeline-vertical-panel-inverted__heading {
   text-align: left;
 }
-/* line 182, ../scss/05-components/_timeline.scss */
+/* line 184, ../scss/05-components/_timeline.scss */
 .timeline-vertical-panel-inverted__content {
   text-align: left;
 }
@@ -10101,4 +10103,9 @@ p {
 .navbar-brand {
   color: #fed136 !important;
   font-family: "Pacifico", cursive;
+}
+
+/* line 35, ../scss/07-override/_main.scss */
+.carousel-item {
+  text-align: justify;
 }
